@@ -11,9 +11,9 @@
 
  	ini_set('display_errors', 2);
  	//This is used in path for images and scripts, make sure this is the name of main folder
- 	define("APP_NAME", "/php_mvc/status_dashboard"); 
+ 	define("APP_NAME", "/www/update_status/status_dashboard"); 
  	define("DB_HOST", "localhost");
- 	define("DB_USER", "employee_status");
- 	define("DB_PASSWORD", "employee_status");
- 	define("DB_DATABASE", "employee_status");
+ 	define("DB_USER", "im_presence");
+ 	define("DB_PASSWORD", "im_presence");
+ 	define("DB_DATABASE", "im_presence");
  	define("DB_PORT", "3306");
