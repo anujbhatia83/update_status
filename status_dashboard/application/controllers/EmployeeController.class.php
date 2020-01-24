@@ -74,7 +74,7 @@ class EmployeeController extends Controller{
     }
 
     public function updateStatusAction() {
-        //print_r($_POST); exit;
+        print_r($_POST); exit;
         ini_set('SMTP','localhost');
         ini_set('smtp_port',25);
 
