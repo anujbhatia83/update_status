@@ -1,0 +1,19 @@
+<?php
+/*
+**================================================================
+** Set up database credentials here
+** Set up folder name here for APP_NAME
+** Sample default url https://sbbicrsdev01/php_mvc/customPHPFramework/index.php
+** Sample url for testing database https://sbbicrsdev01/php_mvc/customPHPFramework/index.php?a=testDB
+** Sample url with controller and action https://sbbicrsdev01/php_mvc/customPHPFramework/index.php?c=Default&a=testDB
+**================================================================
+*/
+
+ 	ini_set('display_errors', 2);
+ 	//This is used in path for images and scripts, make sure this is the name of main folder
+ 	define("APP_NAME", "/php_mvc/status_dashboard"); 
+ 	define("DB_HOST", "localhost");
+ 	define("DB_USER", "employee_status");
+ 	define("DB_PASSWORD", "employee_status");
+ 	define("DB_DATABASE", "employee_status");
+ 	define("DB_PORT", "3306");
