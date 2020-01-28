@@ -3,6 +3,16 @@
 // application/controllers/LoginController.class.php
 class EmployeeController extends Controller{
 
+    public function loginAction() {
+        include  CURR_VIEW_PATH ."login.php";
+        exit();
+    }
+
+    public function registerAction() {
+        include  CURR_VIEW_PATH ."register.php";
+        exit();
+    }
+
     public function teamAction($team) {
 
         
