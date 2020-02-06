@@ -159,7 +159,7 @@ class EmployeeController extends Controller{
     public function send_email($subject, $bodyHtml) {
         // If necessary, modify the path in the require statement below to refer to the
         // location of your Composer autoload.php file.
-        require '../../vendor/autoload.php';
+        require 'vendor/autoload.php';
         // Import PHPMailer classes into the global namespace
         // These must be at the top of your script, not inside a function
         // Replace sender@example.com with your "From" address.
