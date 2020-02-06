@@ -1,34 +1,35 @@
 <?php include CURR_VIEW_PATH.'templates/header_new.php'; ?>
-  	<div class="container">
-  		<div class="row" style="margin-top:20px">
-  		    <div class="col-lg-6 col-sm-12">
-  				<form role="form">
-  					<fieldset>
-  						<h2>Please Sign In</h2>
-  						<hr class="colorgraph">
-  						<div class="form-group">
-  		                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
-  						</div>
-  						<div class="form-group">
-  		                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
-  						</div>
-  						<span class="button-checkbox">
-  							<button type="button" class="btn" data-color="info">Remember Me</button>
-  		                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
-  							<a href="" class="btn btn-link pull-right">Forgot Password?</a>
-  						</span>
-  						<hr class="colorgraph">
-  						<div class="row">
-  							<div class="col-xs-6 col-sm-6 col-md-6">
-  		                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
-  							</div>
-  							<div class="col-xs-6 col-sm-6 col-md-6">
-  								<a href="index.php?c=Employee&a=register" class="btn btn-lg btn-primary btn-block">Register</a>
-  							</div>
-  						</div>
-  					</fieldset>
-  				</form>
-  			</div>
-  		</div>
-  	</div>
+  	<body>
+        <div id="logreg-forms">
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+                
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                
+                <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                <a href="#" id="forgot_pswd">Forgot password?</a>
+                <hr>
+                <!-- <p>Don't have an account!</p>  -->
+                <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i>New User Sign up</button>
+            </form>
+
+            <form action="/reset/password/" class="form-reset">
+                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+            </form>
+                
+            <form action="index.php?c=Login&a=register" methond="post" class="form-signup">
+                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+            </form>
+            <br>
+        </div>
+    </body>
 <?php include CURR_VIEW_PATH.'templates/footer_new.php'; ?>

@@ -3,11 +3,28 @@ $(document).ready(function () {
     $(".out-type-div").hide();
 
     $(".status-checkbox").on('change', function() {
+        var status=$(this).attr('status');
         var empID=$(this).attr('empID');
         $("#empID").val(empID);
-        $(".leave-type-div").hide();
-        $(".out-type-div").hide();
-        $("#updateModal").modal();
+        if(status == 1) {
+            $(".leave-type-div").hide();
+            $(".out-type-div").hide();
+            $("#updateModal").modal();
+        } else {
+
+            var data ={"id":empID,"status":1,"location":'Mac Arthur Avenue'};
+
+            $.ajax({
+                url: "index.php?c=Employee&a=updateEmpStatus",
+                type:"post",
+                dataType: "json",
+                data: data,
+                success: function(response) {
+                    location.href("index.php?c=Employee&a=home");
+                }
+            })
+
+        }
     });
 
     $(".status-type-radio").on('click', function() {
@@ -27,6 +44,26 @@ $(document).ready(function () {
     $("#saveBtn").click(function() {
         $("#updateStatusForm").submit();
     });
+
+    function toggleResetPswd(e){
+        e.preventDefault();
+        $('#logreg-forms .form-signin').toggle() // display:block or none
+        $('#logreg-forms .form-reset').toggle() // display:block or none
+    }
+
+    function toggleSignUp(e){
+        e.preventDefault();
+        $('#logreg-forms .form-signin').toggle(); // display:block or none
+        $('#logreg-forms .form-signup').toggle(); // display:block or none
+    }
+
+    $(()=>{
+        // Login Register Form
+        $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+        $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+        $('#logreg-forms #btn-signup').click(toggleSignUp);
+        $('#logreg-forms #cancel_signup').click(toggleSignUp);
+    })
 
 });
 

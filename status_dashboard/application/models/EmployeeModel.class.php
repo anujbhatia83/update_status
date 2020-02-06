@@ -44,4 +44,14 @@ class EmployeeModel extends Model{
 
     }
 
+    public function updateStatus($id,  $status, $location) {
+
+        $sql = "update ".$this->table." set location='".$location."', status='".$status."' where id=".$id;
+
+        $result = $this->db->query($sql);
+
+        return $result;
+
+    }
+
 }

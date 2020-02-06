@@ -18,7 +18,7 @@
 	  										$status_checked = null;
 	  									} 
 	  								?>
-  									<input type="checkbox" class="status-checkbox" empID="<?php echo $e['id'] ?>" 
+  									<input type="checkbox" status="<?php echo $e['status'] ?>" class="status-checkbox" empID="<?php echo $e['id'] ?>" 
   									<?php echo $status_checked?> >
 			 						<span class="slider round"></span>
 								</label>
