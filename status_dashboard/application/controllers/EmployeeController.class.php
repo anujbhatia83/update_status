@@ -185,7 +185,7 @@ class EmployeeController extends Controller{
         // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
         // endpoint in the appropriate region.
         $host = 'email-smtp.us-east-1.amazonaws.com';
-        $port = 25;
+        $port = 587;
 
         // The subject line of the email
         //$subject = 'Sick Leave Notification';
@@ -201,6 +201,7 @@ class EmployeeController extends Controller{
         try {
             // Specify the SMTP settings.
             $mail->isSMTP();
+            //$mail->SMTPDebug = 2;
             $mail->setFrom($sender, $senderName);
             $mail->Username   = $usernameSmtp;
             $mail->Password   = $passwordSmtp;
